@@ -29,10 +29,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:textSize="12sp"
             android:layout_below="@id/fragment_story_title"
             android:text="www.w3c.com/somethingSample_url"
             android:textColor="@color/colorPrimaryLight"
+            android:textSize="12sp"
             android:textStyle="italic" />
 
         <TextView
@@ -75,7 +75,6 @@
         android:id="@+id/fragment_story_viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
 
 
 </LinearLayout>

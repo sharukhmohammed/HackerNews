@@ -6,10 +6,10 @@
     tools:context=".fragments.StoriesFragment">
 
     <android.support.v4.widget.SwipeRefreshLayout
-        android:background="@color/fragment_bg"
         android:id="@+id/fragment_stories_swipe_refresh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/fragment_bg">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/fragment_stories_recycler"

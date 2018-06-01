@@ -7,12 +7,11 @@
 
 
     <android.support.v7.widget.RecyclerView
-        tools:listitem="@layout/item_comment"
-        android:scrollbars="vertical"
         android:id="@+id/fragment_story_comments_recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/item_comment" />
 
 
 </FrameLayout>

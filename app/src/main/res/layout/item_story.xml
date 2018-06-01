@@ -9,17 +9,17 @@
     app:cardUseCompatPadding="true">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:padding="8dp">
 
         <TextView
-            android:layout_weight="1"
             android:id="@+id/item_story_votes"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:drawableTop="@drawable/round_swap_vert_24"
             android:gravity="center"
             android:text="4"
@@ -28,11 +28,11 @@
             android:textSize="24sp" />
 
         <RelativeLayout
-            android:layout_weight="5"
             android:id="@+id/item_story_content_layout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/item_story_votes"
+            android:layout_weight="5"
             android:gravity="center_vertical">
 
             <TextView
