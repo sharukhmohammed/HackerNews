@@ -25,15 +25,13 @@ import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 
-import io.realm.Realm;
-
 /**
  * A simple {@link Fragment} subclass.
  */
-public class LoginFragment extends Fragment implements View.OnClickListener{
+public class LoginFragment extends Fragment implements View.OnClickListener {
 
 
-    public static final String TAG  = "LoginFragment";
+    public static final String TAG = "LoginFragment";
 
     /*Core Fields*/
     private Context context;
@@ -47,8 +45,6 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
     public LoginFragment() {
         // Required empty public constructor
     }
-
-
 
 
     @Override
@@ -74,8 +70,8 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
 
         signInClient = GoogleSignIn.getClient(context,
                 new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build());
+                        .requestEmail()
+                        .build());
 
 
         //Configuring Sign-in button
@@ -84,14 +80,11 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
         signInButton.setOnClickListener(this);
 
 
-
-
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId())
-        {
+        switch (v.getId()) {
             case R.id.fragment_login_button:
 
                 Intent signInIntent = signInClient.getSignInIntent();
@@ -129,8 +122,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
 
     void handleSignIn(GoogleSignInAccount account)
     {
-        if(account!=null)
-        {
+        if (account != null) {
             //SharedPreferences.Editor editor = prefs.edit();
 
 
@@ -149,8 +141,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener{
             //TODO: Write code for sign out
             // available here > https://developers.google.com/identity/sign-in/android/disconnect
 
-        }
-        else Snackbar.make(rootView,"Sign in Error.",Snackbar.LENGTH_SHORT).show();
+        } else Snackbar.make(rootView, "Sign in Error.", Snackbar.LENGTH_SHORT).show();
     }
 
 

@@ -222,7 +222,7 @@ public class StoryCommentsFragment extends Fragment {
 
     private void fetchChildComments(final JSONObject response) {
 
-            if (response.has("kids") && activity!=null) {
+        if (response.has("kids") && activity != null) {
             try {
                 final JSONArray commentIDs = new JSONArray(story.getKidsJSONArray());
 
@@ -250,7 +250,6 @@ public class StoryCommentsFragment extends Fragment {
                                             comment.setParentID(response.optLong("parent"));
                                             comment.setText(response.optString("text"));
                                             comment.setTime(new Date(response.optLong("time") * 1000));
-
 
 
                                             Comment parentComment = realm.where(Comment.class)

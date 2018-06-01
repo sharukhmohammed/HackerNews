@@ -15,10 +15,6 @@ import com.getomnify.hackernews.R;
 import com.getomnify.hackernews.helpers.Utils;
 import com.getomnify.hackernews.realm.Comment;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-
-import io.realm.Realm;
 import io.realm.RealmList;
 import io.realm.RealmResults;
 
@@ -60,16 +56,15 @@ public class StoryCommentsAdapter extends RecyclerView.Adapter<StoryCommentsAdap
                 holder.repliesRecycler.setLayoutManager(llm);
 
                 holder.repliesRecycler.setAdapter(new StoryCommentsAdapter(replies.where().findAll()));
-            }
-            else Log.i("Comments","No replies");
+            } else Log.i("Comments", "No replies");
         }
 
     }
 
     @Override
     public int getItemCount() {
-        if(comments==null)
-        return 0;
+        if (comments == null)
+            return 0;
         else return comments.size();
     }
 

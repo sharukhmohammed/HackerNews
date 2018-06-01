@@ -3,7 +3,6 @@ package com.getomnify.hackernews.adapters;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,18 +42,17 @@ public class StoryRecyclerAdapter extends RecyclerView.Adapter<StoryRecyclerAdap
     public void onBindViewHolder(@NonNull StoryRecyclerAdapter.StoryHolder holder, int position) {
 
         final Story story = stories.get(position);
-        if(story!=null)
-        {
+        if (story != null) {
             holder.votes.setText(String.valueOf(story.getVotes()));
             holder.title.setText(story.getTitle());
             holder.userName.setText(story.getSubmitter());
             holder.comments.setText(String.valueOf(story.getCommentCount()));
             holder.time.setText(new SimpleDateFormat("h:mmaa d-MMM", Locale.ENGLISH).format(story.getTime()));
 
-            ((View)holder.title.getParent()).setOnClickListener(new View.OnClickListener() {
+            ((View) holder.title.getParent()).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    ((MainActivity)context).replaceFragment(StoryTabsFragment.newInstance(story.getId()),StoryTabsFragment.TAG);
+                    ((MainActivity) context).replaceFragment(StoryTabsFragment.newInstance(story.getId()), StoryTabsFragment.TAG);
                 }
             });
         }

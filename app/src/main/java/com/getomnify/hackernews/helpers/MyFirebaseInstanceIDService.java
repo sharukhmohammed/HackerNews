@@ -5,8 +5,6 @@ import android.util.Log;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
 
-import static com.android.volley.VolleyLog.TAG;
-
 /**
  * Created by Sharukh Mohammed on 01/06/18 at 21:21.
  */

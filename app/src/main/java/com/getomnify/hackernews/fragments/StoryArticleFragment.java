@@ -68,8 +68,7 @@ public class StoryArticleFragment extends Fragment {
                         .equalTo("id", storyID)
                         .findFirst();
 
-                if (story != null)
-                {
+                if (story != null) {
 
                     webView = view.findViewById(R.id.fragment_story_article_webView);
 
