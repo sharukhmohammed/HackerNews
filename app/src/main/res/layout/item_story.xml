@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/item_story_votes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/round_swap_vert_24"
+            android:gravity="center"
+            android:text="4"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp" />
+
+        <RelativeLayout
+            android:layout_weight="5"
+            android:id="@+id/item_story_content_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/item_story_votes"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/item_story_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:paddingEnd="0dp"
+                android:paddingStart="8dp"
+                android:text="A New Fast Hash Table, in Response to Google's New Fast Hashtable"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/item_story_submitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/item_story_title"
+                android:paddingEnd="0dp"
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+                android:text="by chewxy"
+                android:textColor="@color/colorPrimaryLight"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/item_story_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_story_title"
+                android:layout_toEndOf="@id/item_story_submitter"
+                android:paddingEnd="0dp"
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+                android:text="time"
+                android:textColor="@color/divider" />
+
+
+            <TextView
+                android:id="@+id/item_story_comments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/item_story_title"
+                android:drawablePadding="4dp"
+                android:drawableStart="@drawable/round_mode_comment_24"
+                android:padding="4dp"
+                android:text="34"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
